@@ -13,23 +13,17 @@ import java.util.ArrayList;
  */
 public class saludos {
 
-    private  String saludos;
-    
-    public  saludos(String saludo){
-        
-  this.saludos=saludo;      
+    public String responder(String respuesta) {
+        return respuesta;
+
     }
 
- 
-    
-    
-    
-    public String responder(String respuesta){
-        return respuesta;
-        
-    }
-    public ArrayList<String> listar(){
-        return null;
-        
+    public ArrayList<String> listar() {
+        ArrayList resultado = new ArrayList();
+        resultado.add("A");
+        resultado.add("B");
+        resultado.add("C");
+        return resultado;
+
     }
 }

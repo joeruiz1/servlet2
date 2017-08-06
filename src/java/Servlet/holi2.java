@@ -7,6 +7,7 @@ package Servlet;
  */
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -36,8 +37,9 @@ public class holi2 extends HttpServlet {
         String saludo = request.getParameter("saludo");
 
         if (saludo != null) {
-            saludos s = new saludos(saludo);
+            saludos s = new saludos();
             String respuesta = s.responder(saludo);
+               ArrayList<String> array= s.listar();
             RequestDispatcher rd = getServletContext().getRequestDispatcher("/index.jsp");
             request.setAttribute("respuesta", respuesta);
             rd.forward(request, response);
